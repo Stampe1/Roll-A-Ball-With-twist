@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
             // Add code to handle the pickup logic, e.g., increase score, play sound, etc.
             score++;
             Debug.Log("Collectible picked up! Score: " + score);
-            Destroy(other.gameObject); // Remove the collectible from the scene
+            other.gameObject.SetActive(false); // Remove the collectible from the scene
         }
 
 
