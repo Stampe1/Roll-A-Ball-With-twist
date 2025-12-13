@@ -1,14 +1,19 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SocialPlatforms.Impl;
 using TMPro;
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 0;
+    public float speed;
     public TextMeshProUGUI countText;
     public int score;
     public GameObject winTextObject;
-
+    public float jumpForce;
+    public TextMeshProUGUI jumpText;
+    public bool isGrounded;
+    public int jumpCount;
+    
     private Rigidbody rb;
     private int count;
     private float movementX;
@@ -21,19 +26,45 @@ public class PlayerController : MonoBehaviour
         count = 0;
         SetCountText();
         winTextObject.SetActive(false);
+        jumpCount = 2;
+        SetJumpCount();
     }
 
-    void OnMove(InputValue MovementValue)
+    void OnMove(InputValue movementValue)
     {
-        Vector2 MovementVector = MovementValue.Get<Vector2>();
+        Vector2 MovementVector = movementValue.Get<Vector2>();
 
         movementX = MovementVector.x;
         movementY = MovementVector.y;
     }
 
+    void OnCollisionStay()
+    {
+        isGrounded = true;
+    }
+
+    void OnJump()
+    {
+        
+        if (jumpCount > 0)
+        {
+            rb.AddForce(Vector2.up * jumpForce);
+            jumpCount--;
+        }
+        else
+        {
+            Debug.Log("Cant jump");
+        }
+        SetJumpCount();
+    }
+
+    void SetJumpCount()
+    {
+        jumpText.text = "Jumps left: " + jumpCount.ToString();
+    }
     void SetCountText()
     {
-        countText.text = "count: " + count.ToString();
+        countText.text = "Score: " + count.ToString();
 
         if (count >= 5)
         {
@@ -59,7 +90,17 @@ public class PlayerController : MonoBehaviour
             count = count + 1;
             SetCountText();
         }
+            //Jumps
+            if (other.CompareTag("Ground"))
+            {
+                jumpCount = 2;
+                SetJumpCount();
+            }
 
+            if (other.CompareTag("Teleporter"))
+            {
+                
+            }
 
 
     }
