@@ -1,12 +1,16 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SocialPlatforms.Impl;
+using TMPro;
 public class PlayerController : MonoBehaviour
 {
     public float speed = 0;
+    public TextMeshProUGUI countText;
     public int score;
+    public GameObject winTextObject;
 
     private Rigidbody rb;
+    private int count;
     private float movementX;
     private float movementY;
 
@@ -14,6 +18,9 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        count = 0;
+        SetCountText();
+        winTextObject.SetActive(false);
     }
 
     void OnMove(InputValue MovementValue)
@@ -22,6 +29,16 @@ public class PlayerController : MonoBehaviour
 
         movementX = MovementVector.x;
         movementY = MovementVector.y;
+    }
+
+    void SetCountText()
+    {
+        countText.text = "count: " + count.ToString();
+
+        if (count >= 5)
+        {
+            winTextObject.SetActive(true);
+        }
     }
 
     // Update is called once per frame
@@ -39,6 +56,8 @@ public class PlayerController : MonoBehaviour
             score++;
             Debug.Log("Collectible picked up! Score: " + score);
             other.gameObject.SetActive(false); // Remove the collectible from the scene
+            count = count + 1;
+            SetCountText();
         }
 
 
