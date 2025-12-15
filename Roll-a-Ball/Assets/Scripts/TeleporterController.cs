@@ -16,6 +16,13 @@ public class TeleporterController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             other.transform.position = TeleportTarget.transform.position + offset;
+            //reset speed after teleporting
+            Rigidbody rb = other.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.linearVelocity = Vector3.zero;
+                rb.angularVelocity = Vector3.zero;
+            }
             LevelRoof.gameObject.SetActive(false);
         }
     }

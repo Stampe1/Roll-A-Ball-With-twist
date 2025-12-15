@@ -13,11 +13,13 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI jumpText;
     public bool isGrounded;
     public int jumpCount;
+    public Transform cameraFollowTarget;
     
     private Rigidbody rb;
     private int count;
     private float movementX;
     private float movementY;
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -78,6 +80,9 @@ public class PlayerController : MonoBehaviour
         Vector3 movement = new Vector3(movementX, 0.0f, movementY);
         rb.AddForce(movement * speed);
     }
+
+   
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Collectible"))
@@ -101,7 +106,11 @@ public class PlayerController : MonoBehaviour
             {
                 
             }
+            
+            
 
 
     }
+    
+    
 }
