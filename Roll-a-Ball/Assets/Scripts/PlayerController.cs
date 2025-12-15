@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI jumpText;
     public bool isGrounded;
     public int jumpCount;
-    public Transform cameraFollowTarget;
+    
     
     private Rigidbody rb;
     private int count;
@@ -30,6 +30,8 @@ public class PlayerController : MonoBehaviour
         winTextObject.SetActive(false);
         jumpCount = 2;
         SetJumpCount();
+        //Initial Spawn
+        
     }
 
     void OnMove(InputValue movementValue)
@@ -111,6 +113,7 @@ public class PlayerController : MonoBehaviour
 
 
     }
+
     
     
 }
