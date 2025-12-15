@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="039eb74f-a8a8-465e-b70d-e8711917b047" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Roll-a-Ball/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Roll-a-Ball/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnerScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnerScript.cs" afterDir="false" />
-    </list>
+    <list default="true" id="039eb74f-a8a8-465e-b70d-e8711917b047" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -113,7 +109,7 @@
       <workItem from="1765635592726" duration="12000" />
       <workItem from="1765635609451" duration="7082000" />
       <workItem from="1765810845945" duration="10000" />
-      <workItem from="1765810862251" duration="10484000" />
+      <workItem from="1765810862251" duration="11084000" />
     </task>
     <servers />
   </component>
