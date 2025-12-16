@@ -104,13 +104,6 @@ public class PlayerController : MonoBehaviour
                 SetJumpCount();
             }
 
-            if (other.CompareTag("Teleporter"))
-            {
-                
-            }
-            
-            
-
 
     }
 
