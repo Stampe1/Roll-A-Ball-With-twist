@@ -1,9 +1,11 @@
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class PickUpCollectible : MonoBehaviour
+public class DeathCount : MonoBehaviour
 {
-    public int score;
+    public TextMeshProUGUI deathText; 
+    public static int score;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

@@ -7,16 +7,16 @@ public class PlayerController : MonoBehaviour
 {
     public float speed;
     public TextMeshProUGUI countText;
-    public int score;
-    public GameObject winTextObject;
+    
+    public static int score;
     public float jumpForce;
     public TextMeshProUGUI jumpText;
     public bool isGrounded;
     public int jumpCount;
-    
+    public static int count;
     
     private Rigidbody rb;
-    private int count;
+    
     private float movementX;
     private float movementY;
     
@@ -27,7 +27,6 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         count = 0;
         SetCountText();
-        winTextObject.SetActive(false);
         jumpCount = 2;
         SetJumpCount();
         //Initial Spawn
@@ -68,11 +67,11 @@ public class PlayerController : MonoBehaviour
     }
     void SetCountText()
     {
-        countText.text = "Score: " + count.ToString();
+        countText.text = "Deaths: " + count.ToString();
 
-        if (count >= 5)
+        if (count >= 30)
         {
-            winTextObject.SetActive(true);
+            
         }
     }
 
@@ -87,13 +86,12 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Collectible"))
+        if (other.CompareTag("Death"))
         {
 
             // Add code to handle the pickup logic, e.g., increase score, play sound, etc.
             score++;
-            Debug.Log("Collectible picked up! Score: " + score);
-            other.gameObject.SetActive(false); // Remove the collectible from the scene
+            Debug.Log("You died! Score: " + score);
             count = count + 1;
             SetCountText();
         }

@@ -3,7 +3,6 @@ using UnityEngine;
 public class TeleporterController : MonoBehaviour
 {
     public GameObject TeleportTarget;
-    public GameObject LevelRoof;
     public Vector3 offset;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,7 +22,7 @@ public class TeleporterController : MonoBehaviour
                 rb.linearVelocity = Vector3.zero;
                 rb.angularVelocity = Vector3.zero;
             }
-            LevelRoof.gameObject.SetActive(false);
+             
         }
     }
 }

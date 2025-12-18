@@ -25,6 +25,8 @@ public class PlayerRespawn : MonoBehaviour
             rb.linearVelocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
         }
+        
+        Debug.Log(PlayerController.count.ToString());
     }
     void OnTriggerEnter(Collider other)
     {
