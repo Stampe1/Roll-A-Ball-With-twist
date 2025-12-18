@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="039eb74f-a8a8-465e-b70d-e8711917b047" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Roll-a-Ball/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Roll-a-Ball/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DeathCube.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DeathCube.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PickUpCollectible.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PickUpCollectible.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerRespawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerRespawn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TeleporterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TeleporterController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Minigame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Minigame.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +114,8 @@
       <workItem from="1765900940959" duration="8000" />
       <workItem from="1765900958108" duration="790000" />
       <workItem from="1766013106934" duration="17000" />
-      <workItem from="1766013135202" duration="4670000" />
+      <workItem from="1766013135202" duration="5015000" />
+      <workItem from="1766072921575" duration="5212000" />
     </task>
     <servers />
   </component>
