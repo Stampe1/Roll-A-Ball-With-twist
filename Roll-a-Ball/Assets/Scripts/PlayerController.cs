@@ -7,7 +7,6 @@ public class PlayerController : MonoBehaviour
 {
     public float speed;
     public TextMeshProUGUI countText;
-    
     public static int score;
     public float jumpForce;
     public TextMeshProUGUI jumpText;
@@ -86,21 +85,20 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        //Dying
         if (other.CompareTag("Death"))
         {
-
-            // Add code to handle the pickup logic, e.g., increase score, play sound, etc.
             score++;
             Debug.Log("You died! Score: " + score);
             count = count + 1;
             SetCountText();
         }
-            //Jumps
-            if (other.CompareTag("Ground"))
-            {
-                jumpCount = 2;
-                SetJumpCount();
-            }
+        //Jumps
+        if (other.CompareTag("Ground"))
+        {
+            jumpCount = 2;
+            SetJumpCount();
+        }
 
 
     }
